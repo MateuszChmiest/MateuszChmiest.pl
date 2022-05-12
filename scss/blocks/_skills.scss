@@ -1,0 +1,131 @@
+#skills {
+  background-color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 29px 13px rgba(0, 0, 0, 0.24);
+}
+
+.skills {
+
+  h1 {
+    color: black;
+    padding-top: 50px;
+    font-family: $font-family;
+    font-weight: 400;
+    text-shadow: 1px 5px 5px rgba(129,129,129,0.5);
+
+    @include tablet {
+      font-size: 2.5rem;
+    }
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin-bottom: 1rem;
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 2rem;
+    }
+
+    @include laptop {
+      grid-gap: 3rem 9rem;
+    }
+
+    @include screen {
+      grid-gap: 2rem 15rem;
+    }
+
+    @include desktop {
+      grid-gap: 2rem 20rem;
+    }
+
+    .skill__box {
+      padding: 1rem;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 1rem;
+      transition: .3s;
+
+      &:hover > h3:after, &:hover > h3:before {
+        width: 2.1875rem;
+      }
+
+      &:hover {
+        transform: scale(1.2);
+      }
+
+      h3 {
+        font-size: 1.5rem;
+        font-weight: 400;
+        margin-top: 1rem;
+        position: relative;
+
+        &:before {
+          content: "";
+          position: absolute;
+          bottom: -10px;
+          right: 50%;
+          width: 0;
+          height: 4px;
+          background-color: $color-primary;
+          transition: .5s;
+        }
+
+        &:after {
+          content: "";
+          position: absolute;
+          bottom: -10px;
+          left: 50%;
+          width: 0;
+          height: 4px;
+          background-color: $color-primary;
+          transition: .5s;
+        }
+
+        @include tablet {
+          font-size: 1rem;
+        }
+      }
+
+      &__img {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        border-radius: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(225, 225, 225, 0.88);
+
+        @include tablet {
+          width: 80px;
+          height: 80px;
+        }
+
+        &:hover {
+          box-shadow: 0 0 15px 5px rgba(46, 169, 162, 0.88);
+        }
+      }
+
+
+      img {
+        max-width: 60px;
+        width: 100%;
+        z-index: 1;
+
+        @include tablet {
+          max-width: 50px;
+        }
+      }
+    }
+  }
+}

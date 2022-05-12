@@ -1,0 +1,154 @@
+.box {
+  min-height: 100vh;
+  width: 100%;
+}
+
+
+/* Hero section */
+
+#hero {
+  background-image: url("/scss/assets/forest.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 2px 29px 13px rgba(0, 0, 0, 0.24);
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.6;
+    z-index: -100;
+  }
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  &__section {
+    z-index: 1000;
+    @include tablet {
+      margin-left: 1rem;
+    }
+    @include laptop {
+      margin-left: 10rem;
+    }
+    @include desktop {
+      margin-left: 12.5rem;
+    }
+    .btn {
+      display: inline-block;
+      padding: 0.625rem 1.875rem;
+      color: white;
+      background-color: transparent;
+      border: 2px solid $color-primary;
+      font-size: 2rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2rem;
+      margin-top: 1.875rem;
+      transition: .3s ease;
+      transition-property: background-color, color;
+
+      @include desktop {
+        padding: 1rem 3rem;
+      }
+
+      &:hover {
+        color: white;
+        background-color: $color-primary;
+      }
+    }
+
+    h1 {
+      display: block;
+      width: fit-content;
+      font-size: 5rem;
+      position: relative;
+      color: transparent;
+      animation: text_reveal .4s ease forwards;
+      animation-delay: 1.5s;
+
+      @include tablet {
+        font-size: 4rem;
+      }
+
+      @include desktop {
+        font-size: 6rem;
+      }
+
+      &:nth-child(1) {
+        animation-delay: 1.5s;
+      }
+
+      &:nth-child(2) {
+        animation-delay: 2.5s;
+      }
+
+      &:nth-child(3) {
+        animation: text_reveal_name .5s ease forwards;
+        animation-delay: 3.5s;
+        font-weight: 600;
+      }
+
+      span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 0;
+        background-color: $color-primary;
+        animation: text_reveal_box 1s ease;
+        animation-delay: 1s;
+      }
+    }
+  }
+
+  .hero__section h1:nth-child(1) span {
+    animation-delay: 1s;
+  }
+
+  .hero__section h1:nth-child(2) span {
+    animation-delay: 2s;
+  }
+
+  .hero__section h1:nth-child(3) span {
+    animation-delay: 3s;
+  }
+}
+
+
+/* End Hero section */
+
+/* Keyframes */
+
+@keyframes text_reveal_box {
+  50% {
+    width: 100%;
+    left:0;
+  }
+
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+@keyframes text_reveal {
+  100% {
+    color: white;
+  }
+}
+
+@keyframes text_reveal_name {
+  100% {
+    color: $color-primary;
+
+  }
+}
+

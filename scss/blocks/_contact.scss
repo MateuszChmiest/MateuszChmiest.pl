@@ -1,0 +1,19 @@
+#contact {
+  background-color: #071a1c;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 2px 29px 13px rgba(0, 0, 0, 0.24);
+
+  h1 {
+    padding-top: 3rem;
+    font-family: $font-family;
+    font-weight: 400;
+    text-shadow: 1px 5px 5px rgba(129,129,129,0.5);
+
+    @include tablet {
+      font-size: 2.5rem;
+    }
+  }
+}

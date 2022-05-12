@@ -1,0 +1,139 @@
+#projects {
+  background-color: #071a1c;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 2px 29px 13px rgba(0, 0, 0, 0.24);
+
+  h1 {
+    padding-top: 3rem;
+    font-family: $font-family;
+    font-weight: 400;
+    text-shadow: 1px 5px 5px rgba(129,129,129,0.5);
+
+    @include tablet {
+      font-size: 2.5rem;
+    }
+  }
+}
+
+.projects {
+
+  &__box {
+    padding: 2rem;
+    margin-bottom: 1rem;
+
+    @include tablet {
+      padding: 1rem;
+    }
+
+    @include laptop {
+      gap: 1rem;
+      display: block;
+    }
+
+    @include screen {
+      gap: 6.5rem;
+      display: flex;
+    }
+
+    @include desktop {
+      gap: 7.75rem;
+    }
+
+    .card {
+      border: 3px solid $color-primary;
+      background-color: rgb(255, 255, 255);
+      border-radius: 1rem;
+      padding: 0.75rem;
+      transition: .3s;
+
+      &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 15px 5px rgba(46, 169, 162, 0.88);
+      }
+
+      @include tablet {
+        margin-bottom: 2rem;
+      }
+
+      @include laptop {
+        margin-bottom: 2rem;
+        display: flex;
+      }
+
+      @include screen {
+        margin-bottom: 1rem;
+        display: block;
+      }
+
+      &__img {
+        border-radius: 1rem;
+
+        &__picture {
+          max-width: 300px;
+          width: 100%;
+          background-size: cover;
+
+          @include tablet {
+            max-width: 250px;
+          }
+        }
+
+        &__links {
+          margin-top: 0.5rem;
+
+          img {
+            max-width: 35px;
+            width: 100%;
+          }
+        }
+
+        img {
+          border-radius: 1rem;
+        }
+      }
+
+      &__content {
+        @include laptop {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          margin-left: 1rem;
+          max-width: 300px;
+          width: 100%;
+          gap: 1rem;
+        }
+
+        @include screen {
+          margin-left: 0;
+          max-width: 500px;
+          gap: 0;
+        }
+
+        h2 {
+          color: $color-primary-section;
+        }
+
+        img {
+          max-width: 28px;
+
+          @include tablet {
+            max-width: 25px;
+          }
+        }
+        p {
+          line-height: 1.15rem;
+
+          span {
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+}
+
+

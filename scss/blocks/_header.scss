@@ -1,0 +1,142 @@
+#header {
+  z-index: 1000;
+  width: 100%;
+  height: auto;
+  min-height: 6vh;
+  background-color: rgb(34, 82, 79);
+
+}
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+
+  &__logo {
+    padding: 0.8rem;
+    margin-left: 1.5rem;
+
+      @include tablet {
+        margin-left: 0;
+    }
+  }
+}
+
+.menu {
+  margin-right: 2rem;
+
+  @include tablet {
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+
+    @include desktop {
+      gap: 6rem;
+    }
+
+    a {
+      position: relative;
+      text-transform: uppercase;
+      letter-spacing: 0.15rem;
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        border-radius: 4px;
+        background-color: $color-primary;
+        bottom: -5px;
+        left: 0;
+        transform-origin: right;
+        transform: scaleX(0);
+        transition: transform .3s ease-in-out;
+      }
+
+      &:hover::before {
+        transform-origin: left;
+        transform: scaleX(1);
+      }
+
+      &:hover {
+        color: rgb(222, 225, 225);
+      }
+    }
+
+    @include tablet {
+      flex-direction: column;
+      align-items: center;
+      padding: 1.25rem;
+    }
+  }
+}
+
+label {
+  @include tablet {
+    display: block;
+    cursor: pointer;
+  }
+}
+#toggler {
+  &:checked ~ .menu {
+    max-height: 100%;
+  }
+}
+
+#toggler, .menu-button-container {
+  display: none;
+  height: 100%;
+  width: 40px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @include tablet {
+    display: block;
+  }
+
+}
+
+.header-button,
+.header-button::before,
+.header-button::after {
+  display: block;
+  background-color: #fff;
+  position: absolute;
+  height: 3px;
+  width: 25px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+}
+
+.header-button::before {
+  content: '';
+  margin-top: -0.5rem;
+}
+
+.header-button::after {
+  content: '';
+  margin-top: 0.5rem;
+}
+
+#toggler:checked + .menu-button-container .header-button::before {
+  margin-top: 0;
+  transform: rotate(405deg);
+}
+
+#toggler:checked + .menu-button-container .header-button {
+  background: rgba(255, 255, 255, 0);
+}
+
+#toggler:checked + .menu-button-container .header-button::after {
+  margin-top: 0;
+  transform: rotate(-405deg);
+}
+

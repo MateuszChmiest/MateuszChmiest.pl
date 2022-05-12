@@ -1,0 +1,23 @@
+/** Import generic */
+@import "generic/reset";
+@import "misc/variables";
+
+/** Import misc */
+
+@import "misc/mixins";
+
+/** Import blocks  */
+@import "scss/blocks/preloader";
+@import "scss/blocks/header";
+@import "scss/blocks/hero";
+@import "scss/blocks/article";
+@import "scss/blocks/projects";
+@import "scss/blocks/skills";
+@import "scss/blocks/contact";
+
+
+/** Import elements */
+@import "scss/elements/scrollbar";
+
+/** Import general */
+@import "general/typography";
