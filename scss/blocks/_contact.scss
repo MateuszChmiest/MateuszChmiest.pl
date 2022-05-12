@@ -17,3 +17,24 @@
     }
   }
 }
+
+.contact {
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+
+    .contact__text {
+      img {
+        max-width: 350px;
+        width: 100%;
+      }
+    }
+
+    .contact__input {
+      display: flex;
+      flex-direction: column;
+      background-color: black;
+    }
+  }
+}

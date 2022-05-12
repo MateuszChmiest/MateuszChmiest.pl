@@ -1211,6 +1211,20 @@ textarea {
   }
 }
 
+.contact__container {
+  display: flex;
+  justify-content: space-between;
+}
+.contact__container .contact__text img {
+  max-width: 350px;
+  width: 100%;
+}
+.contact__container .contact__input {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+}
+
 /** Import elements */
 ::-webkit-scrollbar {
   width: 0.85rem;
@@ -1304,5 +1318,57 @@ a {
   visibility: visible;
   transform: translateY(7px);
   opacity: 1;
+}
+
+.social {
+  background-color: rgba(70, 172, 167, 0.7);
+  width: 15px;
+  height: 40px;
+  border-radius: 0 20px 20px 0;
+  position: fixed;
+  left: 0;
+  top: 50%;
+  cursor: pointer;
+  z-index: 1;
+  background-image: url("/scss/assets/arrowright.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.social-icon {
+  background-color: black;
+  width: 50px;
+  height: 150px;
+}
+.social-icon img {
+  width: 30px;
+}
+.social:hover {
+  background-color: rgba(70, 172, 167, 0.99);
+}
+.social:after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(70, 172, 167);
+  border-radius: 0 20px 20px 0;
+  -webkit-animation: pulse 2s ease-out infinite;
+          animation: pulse 2s ease-out infinite;
+  opacity: 0.7;
+}
+
+@-webkit-keyframes pulse {
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse {
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
 }
 /*# sourceMappingURL=main.css.map */
