@@ -1218,6 +1218,7 @@ textarea {
   position: relative;
   margin-top: 3rem;
   margin-bottom: 3rem;
+  width: 100%;
 }
 .contact__container img {
   max-width: 400px;
