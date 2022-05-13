@@ -1275,11 +1275,16 @@ textarea {
           animation: pulse 2s ease-out infinite;
   opacity: 0.7;
 }
+@media (max-width: 773px) {
+  .social {
+    display: none;
+  }
+}
 
 .social-icon {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   position: fixed;
   left: 0;
   top: 45%;
