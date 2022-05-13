@@ -1214,15 +1214,73 @@ textarea {
 .contact__container {
   display: flex;
   justify-content: space-between;
+  padding: 2rem;
+  position: relative;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
-.contact__container .contact__text img {
-  max-width: 350px;
+.contact__container img {
+  max-width: 400px;
   width: 100%;
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  opacity: 0.6;
+  z-index: 0;
 }
-.contact__container .contact__input {
+@media (max-width: 773px) {
+  .contact__container {
+    display: block;
+  }
+}
+@media (min-width: 774px) {
+  .contact__container {
+    gap: 3rem;
+  }
+}
+@media (min-width: 1080px) {
+  .contact__container {
+    gap: 3rem;
+  }
+}
+@media (min-width: 1350px) {
+  .contact__container {
+    gap: 35rem;
+  }
+}
+.contact__container .contact__text {
+  padding: 2rem;
+  z-index: 1;
+}
+.contact__container .contact__text p {
+  color: white;
+  line-height: 1.5rem;
+}
+.contact__container .contact__input form {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
-  background-color: black;
+  color: white;
+  width: 300px;
+}
+.contact__container .contact__input__box {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-start;
+  width: 100%;
+  padding: 1rem;
+  position: relative;
+}
+.contact__container .contact__input__box span {
+  margin-bottom: 0.5rem;
+}
+.contact__container .contact__input__box input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid rgba(46, 169, 162, 0.88);
+  color: white;
+  width: 100%;
 }
 
 /** Import elements */
