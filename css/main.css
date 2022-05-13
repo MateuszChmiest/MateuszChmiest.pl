@@ -1244,6 +1244,81 @@ textarea {
   background-color: rgba(30, 133, 129, 0.88);
 }
 
+.social {
+  background-color: rgba(70, 172, 167, 0.7);
+  width: 17px;
+  height: 40px;
+  border-radius: 0 20px 20px 0;
+  position: fixed;
+  left: 0;
+  top: 50%;
+  cursor: pointer;
+  z-index: 1;
+  background-image: url("/scss/assets/arrowright.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  visibility: hidden;
+  opacity: 0;
+}
+.social:hover {
+  background-color: rgba(70, 172, 167, 0.99);
+}
+.social:after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(70, 172, 167);
+  border-radius: 0 20px 20px 0;
+  -webkit-animation: pulse 2s ease-out infinite;
+          animation: pulse 2s ease-out infinite;
+  opacity: 0.7;
+}
+
+.social-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: fixed;
+  left: 0;
+  top: 45%;
+  background-color: rgba(46, 169, 162, 0.71);
+  width: 40px;
+  height: 100px;
+  text-align: center;
+  z-index: 1;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 400ms ease-in-out, visibility 400ms;
+}
+.social-icon:hover {
+  background-color: rgba(46, 169, 162, 0.99);
+}
+
+@-webkit-keyframes pulse {
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse {
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.hide {
+  visibility: hidden;
+  opacity: 0;
+}
+
 /** Import general */
 * {
   box-sizing: border-box;
@@ -1318,77 +1393,5 @@ a {
   visibility: visible;
   transform: translateY(7px);
   opacity: 1;
-}
-
-.social {
-  background-color: rgba(70, 172, 167, 0.7);
-  width: 17px;
-  height: 40px;
-  border-radius: 0 20px 20px 0;
-  position: fixed;
-  left: 0;
-  top: 50%;
-  cursor: pointer;
-  z-index: 1;
-  background-image: url("/scss/assets/arrowright.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  visibility: hidden;
-  opacity: 0;
-}
-.social:hover {
-  background-color: rgba(70, 172, 167, 0.99);
-}
-.social:after {
-  content: "";
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background-color: rgb(70, 172, 167);
-  border-radius: 0 20px 20px 0;
-  -webkit-animation: pulse 2s ease-out infinite;
-          animation: pulse 2s ease-out infinite;
-  opacity: 0.7;
-}
-
-.social-icon {
-  position: fixed;
-  left: 0;
-  top: 50%;
-  background-color: black;
-  width: 40px;
-  height: 150px;
-  text-align: center;
-  z-index: 1;
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity 400ms ease-in-out, visibility 400ms;
-}
-.social-icon img {
-  width: 30px;
-}
-
-@-webkit-keyframes pulse {
-  100% {
-    transform: scale(1.5);
-    opacity: 0;
-  }
-}
-
-@keyframes pulse {
-  100% {
-    transform: scale(1.5);
-    opacity: 0;
-  }
-}
-.show {
-  visibility: visible;
-  opacity: 1;
-}
-
-.hide {
-  visibility: hidden;
-  opacity: 0;
 }
 /*# sourceMappingURL=main.css.map */
