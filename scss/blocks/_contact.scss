@@ -29,6 +29,10 @@
     margin-bottom: 3rem;
     width: 100%;
 
+    @include tablet {
+      margin-top: 0;
+    }
+
     img {
       max-width: 400px;
       width: 100%;
@@ -37,6 +41,14 @@
       left: 0;
       opacity: 0.6;
       z-index: 0;
+
+      @include tablet {
+        opacity: 0.4;
+      }
+
+      @include desktop {
+        max-width: 500px;
+      }
     }
 
     @include tablet {
@@ -48,7 +60,7 @@
     }
 
     @include screen {
-      gap: 3rem;
+      gap: 30rem;
     }
 
     @include desktop {
@@ -58,6 +70,21 @@
     .contact__text {
       padding: 2rem;
       z-index: 1;
+
+      @include tablet {
+        padding: 0;
+        margin-bottom: 2rem;
+      }
+
+      h2 {
+        color: white;
+        font-weight: 400;
+        font-size: 3rem;
+
+        span {
+          color: $color-primary;
+        }
+      }
 
       p {
         color: white;

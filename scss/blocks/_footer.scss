@@ -1,0 +1,37 @@
+#footer {
+  background-color: $color-primary-section;
+  box-shadow: 0 2px 29px 13px rgba(0, 0, 0, 0.26);
+
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+
+  &__copyright {
+    color: white;
+
+    img {
+      max-width: 180px;
+      width: 100%;
+
+      @include tablet {
+        max-width: 130px;
+      }
+    }
+
+    p {
+      font-family: $font-secondary;
+      font-weight: lighter;
+      font-size: 1rem;
+
+      @include tablet {
+        font-size: 0.7rem;
+        margin-top: 0.25rem;
+      }
+    }
+  }
+}
