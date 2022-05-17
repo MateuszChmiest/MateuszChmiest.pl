@@ -2,7 +2,7 @@
 This project is my portfolio website where you can find out <br/>more about me and my skills.
 
 <div>
-!![Screenshot](ScreenReadMe.png)
+![Screenshot](ScreenReadMe.png)
 </div>
 
 
