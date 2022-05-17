@@ -2,7 +2,7 @@
 This project is my portfolio website where you can find out <br/>more about me and my skills.
 
 <div>
-![ScreenReadMe](https://user-images.githubusercontent.com/94719206/168831215-aa6b2fc1-3345-4582-91f6-e7af79366916.png)
+<img src="./scss/assets/ScreenReadMe.png" width="360" height="200">
 </div>
 
 
