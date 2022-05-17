@@ -1,6 +1,11 @@
 <h1>MateuszChmiest.pl - Project</h1>
 This project is my portfolio website where you can find out <br/>more about me and my skills.
 
+<div>
+<img src="./scss/assets/ScreenReadMe.png" width="360" height="200">
+</div>
+
+
 <h2>Features</h2>
 <li>Preloader while the page is loading</li>
 <li>Responsive design</li>
