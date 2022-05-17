@@ -2,7 +2,7 @@
 This project is my portfolio website where you can find out <br/>more about me and my skills.
 
 <div>
-<img src="./scss/assets/ScreenReadMe.png" width="360" height="200">
+!![Screenshot](ScreenReadMe.png)
 </div>
 
 
