@@ -1325,6 +1325,19 @@ textarea {
   text-align: center;
   padding: 1rem;
 }
+.footer__social {
+  margin-top: 0.5rem;
+}
+@media (min-width: 774px) {
+  .footer__social {
+    display: none;
+  }
+}
+@media (max-width: 773px) {
+  .footer__social {
+    display: block;
+  }
+}
 .footer__copyright {
   color: white;
 }
@@ -1338,9 +1351,10 @@ textarea {
   }
 }
 .footer__copyright p {
-  font-family: "Releway", sans-serif;
+  font-family: "Cairo", sans-serif;
   font-weight: lighter;
-  font-size: 1rem;
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
 }
 @media (max-width: 773px) {
   .footer__copyright p {

@@ -11,6 +11,17 @@
   text-align: center;
   padding: 1rem;
 
+  &__social {
+    margin-top: 0.5rem;
+    
+    @include laptop {
+      display: none;
+    }
+    @include tablet {
+      display: block;
+    }
+  }
+
   &__copyright {
     color: white;
 
@@ -24,9 +35,10 @@
     }
 
     p {
-      font-family: $font-secondary;
+      font-family: $font-family;
       font-weight: lighter;
-      font-size: 1rem;
+      font-size: 0.75rem;
+      margin-top: 0.5rem;
 
       @include tablet {
         font-size: 0.7rem;
