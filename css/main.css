@@ -1214,7 +1214,7 @@ textarea {
 .contact__container {
   display: flex;
   justify-content: space-between;
-  padding: 2rem;
+  padding: 5% 0;
   position: relative;
   margin-top: 3rem;
   margin-bottom: 3rem;
@@ -1226,22 +1226,18 @@ textarea {
   }
 }
 .contact__container img {
-  max-width: 400px;
+  max-width: 500px;
   width: 100%;
   position: absolute;
   bottom: -50px;
-  left: 0;
+  left: -70px;
   opacity: 0.6;
   z-index: 0;
 }
 @media (max-width: 773px) {
   .contact__container img {
     opacity: 0.4;
-  }
-}
-@media (min-width: 1350px) {
-  .contact__container img {
-    max-width: 500px;
+    left: 0;
   }
 }
 @media (max-width: 773px) {
@@ -1256,17 +1252,19 @@ textarea {
 }
 @media (min-width: 1080px) {
   .contact__container {
-    gap: 30rem;
+    gap: 13rem;
   }
 }
 @media (min-width: 1350px) {
   .contact__container {
-    gap: 35rem;
+    gap: 20rem;
   }
 }
 .contact__container .contact__text {
-  padding: 2rem;
   z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 @media (max-width: 773px) {
   .contact__container .contact__text {
@@ -1277,14 +1275,26 @@ textarea {
 .contact__container .contact__text h2 {
   color: white;
   font-weight: 400;
-  font-size: 3rem;
+  font-size: 4rem;
+}
+@media (max-width: 773px) {
+  .contact__container .contact__text h2 {
+    font-size: 3rem;
+  }
 }
 .contact__container .contact__text h2 span {
   color: rgba(46, 169, 162, 0.88);
 }
 .contact__container .contact__text p {
+  font-size: 1.25rem;
+  font-family: "Releway", sans-serif;
   color: white;
   line-height: 1.5rem;
+}
+@media (max-width: 773px) {
+  .contact__container .contact__text p {
+    font-size: 1rem;
+  }
 }
 .contact__container .contact__input form {
   display: flex;
@@ -1292,7 +1302,26 @@ textarea {
   align-items: center;
   flex-direction: column;
   color: white;
-  width: 300px;
+  width: 400px;
+}
+@media (max-width: 773px) {
+  .contact__container .contact__input form {
+    width: 320px;
+  }
+}
+.contact__container .contact__input form h2 {
+  margin-bottom: 1rem;
+}
+.contact__container .contact__input__submit input {
+  padding: 0.5rem 4rem 0.5rem 4rem;
+  z-index: 1;
+  background-color: transparent;
+  border: 2px solid rgba(46, 169, 162, 0.88);
+  color: white;
+  transition: background-color 0.1s;
+}
+.contact__container .contact__input__submit input:hover {
+  background-color: rgba(46, 169, 162, 0.88);
 }
 .contact__container .contact__input__box {
   display: flex;
@@ -1304,6 +1333,26 @@ textarea {
 }
 .contact__container .contact__input__box span {
   margin-bottom: 0.5rem;
+  position: absolute;
+  top: 25%;
+  left: 5%;
+  pointer-events: none;
+  transition: 0.5s;
+  color: rgba(255, 255, 255, 0.75);
+}
+.contact__container .contact__input__box textarea {
+  resize: none;
+  width: 100%;
+  margin-top: 0.5rem;
+  height: 5rem;
+  background-color: rgba(255, 255, 255, 0.16);
+  border: 2px solid rgba(46, 169, 162, 0.88);
+  color: white;
+}
+.contact__container .contact__input__box textarea:valid ~ span, .contact__container .contact__input__box textarea:focus ~ span {
+  color: rgba(46, 169, 162, 0.88);
+  font-size: 15px;
+  transform: translateY(-25px);
 }
 .contact__container .contact__input__box input {
   background-color: transparent;
@@ -1311,6 +1360,11 @@ textarea {
   border-bottom: 2px solid rgba(46, 169, 162, 0.88);
   color: white;
   width: 100%;
+}
+.contact__container .contact__input__box input:valid ~ span, .contact__container .contact__input__box input:focus ~ span {
+  color: rgba(46, 169, 162, 0.88);
+  font-size: 14px;
+  transform: translateY(-13px);
 }
 
 #footer {
