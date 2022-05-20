@@ -21,9 +21,10 @@
 .contact {
 
   &__container {
+
     display: flex;
     justify-content: space-between;
-    padding: 2rem;
+    padding: 5% 0;
     position: relative;
     margin-top: 3rem;
     margin-bottom: 3rem;
@@ -34,20 +35,17 @@
     }
 
     img {
-      max-width: 400px;
+      max-width: 500px;
       width: 100%;
       position: absolute;
       bottom: -50px;
-      left: 0;
+      left: -70px;
       opacity: 0.6;
       z-index: 0;
 
       @include tablet {
         opacity: 0.4;
-      }
-
-      @include desktop {
-        max-width: 500px;
+        left: 0;
       }
     }
 
@@ -60,16 +58,18 @@
     }
 
     @include screen {
-      gap: 30rem;
+      gap: 13rem;
     }
 
     @include desktop {
-      gap: 35rem;
+      gap: 20rem;
     }
 
     .contact__text {
-      padding: 2rem;
       z-index: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
 
       @include tablet {
         padding: 0;
@@ -79,7 +79,11 @@
       h2 {
         color: white;
         font-weight: 400;
-        font-size: 3rem;
+        font-size: 4rem;
+
+        @include tablet {
+          font-size: 3rem;
+        }
 
         span {
           color: $color-primary;
@@ -87,8 +91,14 @@
       }
 
       p {
+        font-size: 1.25rem;
+        font-family: $font-secondary;
         color: white;
         line-height: 1.5rem;
+
+        @include tablet {
+          font-size: 1rem;
+        }
       }
     }
 
@@ -99,9 +109,33 @@
         align-items: center;
         flex-direction: column;
         color: white;
-        width: 500px;
+        width: 400px;
 
+        @include tablet {
+          width: 320px;
+        }
+
+        h2 {
+          margin-bottom: 1rem;
+        }
       }
+
+      &__submit {
+
+        input {
+          padding: 0.5rem 4rem 0.5rem 4rem;
+          z-index: 1;
+          background-color: transparent;
+          border: 2px solid $color-primary;
+          color: white;
+          transition: background-color .1s;
+
+          &:hover {
+            background-color: $color-primary;
+          }
+        }
+      }
+
       &__box {
         display: flex;
         flex-direction: column-reverse;
@@ -112,12 +146,28 @@
 
         span {
           margin-bottom: 0.5rem;
+          position: absolute;
+          top: 25%;
+          left: 5%;
+          pointer-events: none;
+          transition: 0.5s;
+          color: rgba(255, 255, 255, 0.75);
         }
 
         textarea {
           resize: none;
           width: 100%;
           margin-top: 0.5rem;
+          height: 5rem;
+          background-color: rgba(255, 255, 255, 0.16);
+          border: 2px solid $color-primary;
+          color: white;
+
+          &:valid ~ span, &:focus ~ span {
+            color: $color-primary;
+            font-size: 15px;
+            transform: translateY(-25px);
+          }
         }
 
         input{
@@ -126,6 +176,12 @@
           border-bottom: 2px solid $color-primary;
           color: white;
           width: 100%;
+
+          &:valid ~ span, &:focus ~ span {
+            color: $color-primary;
+            font-size: 14px;
+            transform: translateY(-13px);
+          }
         }
       }
     }
